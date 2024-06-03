@@ -1,0 +1,14 @@
+@use "../../styles/partials/globals";
+@use "../../styles/partials/typography";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.currentVideo {
+    width: 100%;
+    background-color: $secondary-color-black;
+
+    @include tablet {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
