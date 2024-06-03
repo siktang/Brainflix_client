@@ -8,6 +8,23 @@
     flex-direction: column;
     align-items: center;
 
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__navbar {
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__search {
+        display: flex;
+
+    }
+
     &__avatar--mobile {
         width: 2.25rem;
         height: 2.25rem;
