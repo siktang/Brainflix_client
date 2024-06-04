@@ -5,7 +5,7 @@ export default function Navbar() {
     return (
         <div className='navbar'>
             <div className='navbar__search'>
-                <div>
+                <div className='navbar__search--searchContainer'>
                     <label htmlFor='searchBox'></label>
                     <input type='search' id='searchBox' name='searchBox' placeholder='Search' className='navbar__search--searchBox'/>
                 </div>
