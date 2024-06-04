@@ -12,6 +12,7 @@
     @include tablet {
         flex-direction: row;
         justify-content: space-between;
+        padding: 0 2.25rem 0 2.25rem;
     }
 
     &__navbar {
