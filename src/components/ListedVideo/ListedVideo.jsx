@@ -1,12 +1,11 @@
 import './ListedVideo.scss'
 
-export default function ListedVideo() {
+export default function ListedVideo({ title, image, channel}) {
     return (
-        <div>
-            <video className='currentVideo' controls poster='https://unit-3-project-api-0a5620414506.herokuapp.com/images/image0.jpg'>
-            <source src='https://unit-3-project-api-0a5620414506.herokuapp.com/stream?api_key=sd' type='video/mp4'/>
-            Your browser does not support this video.
-            </video>
+        <div className='listedVideo'>
+            <img src={image} alt='poster' className='listedVideo__poster'/>
+            <div className='listedVideo__title'>{title}</div>
+            <div className='listedVideo__channel'>{channel}</div>
         </div>
     )
 }

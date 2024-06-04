@@ -11,6 +11,7 @@ function App() {
     <>
       <Header />
       <CurrentVideo />
+      <SideBar videoList={videoList} />
     </>
   )
 }

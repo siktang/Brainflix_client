@@ -1,14 +1,18 @@
 import ListedVideo from '../ListedVideo/ListedVideo'
 import './SideBar.scss'
 
-export default function SideBar() {
+export default function SideBar({ videoList }) {
     return (
-        <section>
+        <div>
             <h2>Next video</h2>
 
-
-            <ListedVideo />
-
-        </section>
+            <section className='videoList'>
+                {videoList.map((video) => <ListedVideo 
+                    title={video.title}
+                    image={video.image}
+                    channel={video.channel}
+                />)}
+            </section>
+        </div>
     )
 }
