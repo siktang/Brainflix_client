@@ -2,3 +2,16 @@
 @use "../../styles/partials/typography";
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+
+.sideBar {
+    margin: 1rem;
+
+    @include tablet {
+        margin: 2.25rem;
+    }
+
+    &__videoList {
+        display: flex;
+        flex-direction: column;
+    }
+}

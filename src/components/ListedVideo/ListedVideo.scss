@@ -2,3 +2,47 @@
 @use "../../styles/partials/typography";
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+
+.listedVideo {
+    display: flex;
+    margin: 1rem 1rem 0 0;
+
+    @include tablet {
+        margin: 1.5rem 1.5rem 0 0;
+    }
+
+
+    &__poster {
+        background-color: $secondary-color-silver;
+        border-radius: 4px;
+        
+
+        &--img {
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            width: 6.25rem;
+
+            @include tablet {
+                width: 7rem;
+            }
+        }
+    }
+
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 1rem;
+
+        &--title {
+            font-size: 0.813rem;
+            font-weight: 700;
+        }
+
+        &--channel {
+            font-size: 0.813rem;
+            font-weight: 500;
+        }
+    }
+}
