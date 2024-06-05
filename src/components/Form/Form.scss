@@ -1,0 +1,84 @@
+@use "../../styles/partials/globals";
+@use "../../styles/partials/typography";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.form-container {
+    display: flex;
+    margin: 1rem;
+
+    @include tablet {
+        margin: 1rem 2.25rem 1rem 2.25rem;
+    }
+
+
+    &__avatar {
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: left;
+        margin: 1.5rem 1rem 0 0;
+
+        @include tablet {
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between; 
+        }
+
+        &--form-body {
+            @include tablet {
+                width: 100%;
+                margin-right: 1.5rem;
+            }
+        }
+
+        &--input {
+            height: 6.5rem;
+            width: 100%;
+            resize: vertical;
+            padding: 0.75rem;
+            margin: 0.25rem 0 1rem 0;
+            border-radius: 4px;
+            border: 1px solid #E1E1E1;
+            background-color: #FAFAFA;
+
+            @include tablet {
+                height: 2.5rem;
+            }
+
+            &::placeholder {
+                color: $primary-color-black;
+            }
+        }
+
+        &--button {
+            background-color: $primary-color-blue;
+            height: 2.5rem;
+            color: $primary-color-white;
+            border: transparent;
+            border-radius: 4px;
+            width: 100%;
+            font-weight: 600;
+            background-image: url(../../assets/images/icons/add_comment.svg);
+            background-repeat: no-repeat;
+            background-position: 5% 50%;
+
+            @include tablet {
+                min-width: 9.375rem;
+                max-width: 9.375rem;
+                margin: 1.5rem 0 1.5rem 0;
+            }
+        }
+    }
+}
