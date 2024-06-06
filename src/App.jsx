@@ -16,7 +16,6 @@ function App() {
     <>
       <Header />
       <Main currentVideo={currentVideo} time={time} />
-      <Form />
       <SideBar videoList={videoList} />
     </>
   )
