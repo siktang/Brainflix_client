@@ -1,6 +1,6 @@
 import './CurrentVideo.scss';
 
-export default function CurrentVideo({ currentVideo, time }) {
+export default function CurrentVideo({ currentVideo }) {
 
     return (
             <div className='videoContainer'>
