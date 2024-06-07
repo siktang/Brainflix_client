@@ -1,3 +1,4 @@
+import './VideoInfo.scss'
 import viewIcon from '../../assets/images/icons/views.svg'
 import likeIcon from '../../assets/images/icons/likes.svg'
 
@@ -13,12 +14,12 @@ export default function VideoInfo({ currentVideo, time }) {
                         <h3 className='videoInfo__details--time'>{time.toLocaleDateString('es-pa')}</h3>
                     </div>
                     <div className='videoInfo__stat'>
-                        <div className='videoInfo__stat-boxForViews'>
-                            <img src={viewIcon} alt='icon-for-views' />
+                        <div className='videoInfo__stat--boxForViews'>
+                            <img src={viewIcon} alt='icon-for-views' className='videoInfo__icons'/>
                             <h3 className='videoInfo__stat--views'>{currentVideo.views}</h3>
                         </div>
-                        <div className='videoInfo__stat-boxForLikes'>
-                            <img src={likeIcon} alt='icon-for-likes' />
+                        <div className='videoInfo__stat--boxForLikes'>
+                            <img src={likeIcon} alt='icon-for-likes' className='videoInfo__icons' />
                             <h3 className='videoInfo__stat--likes'>{currentVideo.likes}</h3>
                         </div>
                     </div>
@@ -26,6 +27,7 @@ export default function VideoInfo({ currentVideo, time }) {
             </div>
             <div className='divider'></div>
             <div className='videoDesc'>{currentVideo.description}</div>
+            <div className='videoCommentCounts'>{currentVideo.comments.length} Comments</div>
         </>
     )
 }
