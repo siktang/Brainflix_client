@@ -52,5 +52,10 @@
 
     &__details {
         margin-top: 1rem;
+        font-size: 0.813rem;
+
+        @include tablet {
+            font-size: 0.875rem;
+        }
     }
 }

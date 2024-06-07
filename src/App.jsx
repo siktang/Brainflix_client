@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.scss'
 import Header from './components/Header/Header'
-import SideBar from './components/SideBar/SideBar'
 import videoList from '../src/data/video-details.json'
 import Main from './components/Main/Main'
 
@@ -10,11 +9,21 @@ function App() {
 
   const time = new Date(currentVideo.timestamp);
 
+  const nextVideos = videoList.filter((video) => (
+    video.id !== currentVideo.id
+  ) );
+
+  const changeCurrentVideo = (videoId) => {
+    const selectedVideo = videoList.find((video) => (
+      video.id === videoId
+    ));
+    setCurrentVideo(selectedVideo);
+  }
+
   return (
     <>
       <Header />
-      <Main currentVideo={currentVideo} time={time} />
-      <SideBar videoList={videoList} />
+      <Main currentVideo={currentVideo} time={time} nextVideos={nextVideos} changeCurrentVideo={changeCurrentVideo}/>
     </>
   )
 }
