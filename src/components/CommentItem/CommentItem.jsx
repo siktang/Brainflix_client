@@ -1,4 +1,4 @@
-import './CommentItem.scss';
+import "./CommentItem.scss";
 
 export default function CommentItem({ name, comment, timestamp }) {
     const date = new Date(timestamp);

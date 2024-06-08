@@ -5,7 +5,7 @@ import Form from "../Form/Form";
 import DisplayComments from "../DisplayComments/DisplayComments";
 import SideBar from "../SideBar/SideBar";
 import videoList from "../../data/video-details.json";
-import "./MainPage.scss"
+import "./MainPage.scss";
 
 export default function Main() {
     const [currentVideo, setCurrentVideo] = useState(videoList[0]);

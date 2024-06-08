@@ -1,12 +1,12 @@
-import ListedVideo from '../ListedVideo/ListedVideo'
-import './SideBar.scss'
+import ListedVideo from "../ListedVideo/ListedVideo"
+import "./SideBar.scss"
 
 export default function SideBar({ nextVideos, changeCurrentVideo }) {
     return (
-        <div className='sideBar'>
-            <h2 className='section-header'>NEXT VIDEOS</h2>
+        <div className="sideBar">
+            <h2 className="section-header">NEXT VIDEOS</h2>
 
-            <section className='sideBar__videoList'>
+            <section className="sideBar__videoList">
                 {nextVideos.map((video) => <ListedVideo 
                     key={video.id}
                     id={video.id}

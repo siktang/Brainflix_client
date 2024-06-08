@@ -1,5 +1,5 @@
-import CommentItem from '../CommentItem/CommentItem';
-import './DisplayComments.scss'
+import CommentItem from "../CommentItem/CommentItem";
+import "./DisplayComments.scss"
 
 export default function DisplayComments({ currentVideo }) {
     const commentsList = currentVideo.comments;
