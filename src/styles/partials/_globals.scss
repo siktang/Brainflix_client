@@ -24,9 +24,5 @@ html {
 
   .divider {
     border-bottom: 1px solid $secondary-color-silver;
-    margin: 0 1rem 1rem 1rem;
-
-    @include tablet {
-      margin: 0 2.25rem 1rem 2.25rem;
-    }
+    margin-bottom: 1rem;
   }

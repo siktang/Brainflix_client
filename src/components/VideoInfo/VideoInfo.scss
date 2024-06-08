@@ -10,17 +10,16 @@
         font-size: 1.5rem;
         line-height: 2rem;
         font-weight: 700;
-        margin: 1.5rem 1rem 1rem 1rem;
+        margin-bottom: 1rem;
 
         @include tablet {
-            margin-left: 2.25rem; 
             font-size: 2.063rem;
         }
     }
 
     &__divider {
         border-bottom: 1px solid $secondary-color-silver;
-        margin: 0 1rem 1rem 1rem;
+        margin-bottom: 1rem;
 
         @include tablet {
             display: none;
@@ -29,14 +28,10 @@
 
     &__container {
         display: flex;
-        margin-left: 1rem;
-        margin-right: 1rem;
         justify-content: flex-start;
 
         @include tablet {
             justify-content: space-between;
-            margin-left: 2.25rem;
-            margin-right: 2.25rem;
         }
 
     }
@@ -111,11 +106,11 @@
 
 .videoDesc, .videoCommentCounts {
     font-size: 0.813rem;
-    margin: 0 1rem 1rem 1rem;
+    margin-bottom: 1rem;
 
     @include tablet {
         font-size: 0.875rem;
-        margin: 0 2.25rem 1.5rem 2.25rem
+        margin-bottom: 1.5rem;
     }
 }
 
