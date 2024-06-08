@@ -14,6 +14,11 @@
 
         @include tablet {
             font-size: 2.063rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @include desktop {
+            margin-top: 2.25rem; 
         }
     }
 
@@ -82,6 +87,10 @@
             @include tablet {
                 margin-right: 0;
             }
+
+            @include desktop {
+                margin-right: 1.5rem;
+            }
         }
 
         &--views, &--likes {
@@ -111,6 +120,12 @@
     @include tablet {
         font-size: 0.875rem;
         margin-bottom: 1.5rem;
+    }
+}
+
+.videoDesc {
+    @include desktop {
+        margin-right: 1.5rem;
     }
 }
 

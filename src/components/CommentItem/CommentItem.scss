@@ -11,6 +11,10 @@
         margin: 1.5rem 0 1.5rem 0;
     }
 
+    @include desktop {
+        margin-right: 1.5rem;
+    }
+
     &__avatar {
         background-color: $secondary-color-silver;
         width: 2.25rem;
