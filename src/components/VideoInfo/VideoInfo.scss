@@ -131,4 +131,8 @@
 
 .videoCommentCounts {
     font-weight: 700;
+
+    @include tablet {
+        margin-bottom: 1rem;
+    }
 }

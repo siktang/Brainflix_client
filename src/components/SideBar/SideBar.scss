@@ -8,7 +8,8 @@
     padding-bottom: 3rem;
 
     @include tablet {
-        margin: 2.25rem;
+        margin: 1.5rem 2.25rem 2.25rem 2.25rem;
+        width: 45%;
     }
 
     @include desktop {
