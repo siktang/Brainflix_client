@@ -30,5 +30,29 @@
         }
     }
 
+    &__buttons {
+        display: flex;
+        flex-direction: column;
 
+        &--publish {
+            background-color: $primary-color-blue;
+            height: 2.5rem;
+            color: $primary-color-white;
+            border: transparent;
+            border-radius: 4px;
+            width: 100%;
+            font-weight: 600;
+            background-image: url(../../assets/images/icons/publish.svg);
+            background-repeat: no-repeat;
+            background-position: 5% 50%;
+        }
+
+        &--cancel {
+            background-color: $primary-color-white;
+            height: 2.5rem;
+            font-weight: 600;
+            color: $primary-color-blue;
+            border: transparent;
+        }
+    }
 }
