@@ -2,3 +2,15 @@
 @use "../../styles/partials/typography";
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
+
+.uploadDetails {
+
+    &__thumbnail {
+
+        &--image {
+            border-radius: 4px;
+            width: 100%;
+            background-color: $secondary-color-silver;
+        }
+    }
+}

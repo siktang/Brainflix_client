@@ -49,17 +49,13 @@
             padding: 0.75rem;
             margin: 0.25rem 0 1rem 0;
             border-radius: 4px;
-            border: 1px solid #E1E1E1;
-            background-color: #FAFAFA;
+            border: 1px solid $secondary-color-white;
+            background-color: $secondary-color-silver;
             overflow: hidden;
 
             @include tablet {
                 height: 2.5rem;
                 padding-left: 1rem;
-            }
-
-            &::placeholder {
-                color: $primary-color-black;
             }
         }
 

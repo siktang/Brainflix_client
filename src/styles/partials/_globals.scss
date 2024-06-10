@@ -26,3 +26,7 @@ html {
     border-bottom: 1px solid $secondary-color-silver;
     margin-bottom: 1rem;
   }
+
+::placeholder {
+    color: $primary-color-black;
+}
