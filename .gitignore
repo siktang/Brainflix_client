@@ -30,3 +30,5 @@ dist-ssr
 
 # Unnecessary files
 README.md
+.eslintrc.cjs
+vite.config.js
