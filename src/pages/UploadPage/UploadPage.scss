@@ -4,17 +4,40 @@
 @use "../../styles/partials/variables" as *;
 
 .uploadPageContainer {
-    margin: 1.5rem 1rem 1.5rem 1rem;
+    margin: 1.5rem 1rem 0 1rem;
+
+    @include tablet {
+        margin: 1.5rem 2.25rem 0 2.25rem;
+    }
+
+    &__header {
+        @include tablet {
+            padding-top: 0.5rem;
+            padding-bottom: 1.5rem;
+        }
+    }
 }
 
 .uploadDetails {
+    @include tablet {
+        border-top: 1px solid $secondary-color-silver;
+    }
+
 
     &__thumbnail {
+
+        &--title {
+            margin: 1.5rem 0 0.5rem 0;
+        }
 
         &--image {
             border-radius: 4px;
             width: 100%;
             background-color: $secondary-color-silver;
+
+            @include tablet {
+                width: 50%;
+            }
         }
     }
 }

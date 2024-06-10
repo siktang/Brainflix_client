@@ -7,7 +7,7 @@ export default function UploadPage() {
         <main>
             <div className="divider"></div>
             <div className="uploadPageContainer">
-                <h1 className="page-header">Upload Video</h1>
+                <h1 className="uploadPageContainer__header page-header">Upload Video</h1>
                 <div className="uploadDetails">
                     <div className="uploadDetails__thumbnail">
                         <h3 className="uploadDetails__thumbnail--title section-header">VIDEO THUMBNAIL</h3>

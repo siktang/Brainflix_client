@@ -2,11 +2,11 @@ import "./UploadForm.scss"
 
 export default function UploadForm() {
     return (
-        <form>
+        <form className="form">
             <div className="form__fields">
-                <label htmlFor="title" className="section-header">TITLE YOUR VIDEO</label>
+                <label htmlFor="title" className="section-header form__fields--label">TITLE YOUR VIDEO</label>
                 <input type="text" name="title" id="title" placeholder="Add a title to your video" className="form__fields--input"/>
-                <label htmlFor="description" className="section-header">ADD A VIDEO DESCRIPTION</label>
+                <label htmlFor="description" className="section-header form__fields--label">ADD A VIDEO DESCRIPTION</label>
                 <textarea type="text" name="description" id="description" placeholder="Add a description to your video" className="form__fields--textarea"></textarea>
             </div>
             <div className="form__buttons">
