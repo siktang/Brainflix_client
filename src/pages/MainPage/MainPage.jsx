@@ -1,9 +1,9 @@
 import { useState } from "react";
-import CurrentVideo from "../CurrentVideo/CurrentVideo";
-import VideoInfo from "../VideoInfo/VideoInfo";
-import Form from "../Form/Form";
-import DisplayComments from "../DisplayComments/DisplayComments";
-import SideBar from "../SideBar/SideBar";
+import CurrentVideo from "../../components/CurrentVideo/CurrentVideo";
+import VideoInfo from "../../components/VideoInfo/VideoInfo";
+import Form from "../../components/Form/Form";
+import DisplayComments from "../../components/DisplayComments/DisplayComments";
+import SideBar from "../../components/SideBar/SideBar";
 import videoList from "../../data/video-details.json";
 import "./MainPage.scss";
 
