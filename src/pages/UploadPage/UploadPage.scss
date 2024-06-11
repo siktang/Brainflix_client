@@ -10,6 +10,12 @@
         margin: 1.5rem 2.25rem 0 2.25rem;
     }
 
+    @include desktop {
+        width: $desktop-element-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     &__header {
         @include tablet {
             padding-top: 0.5rem;
@@ -23,8 +29,16 @@
         border-top: 1px solid $secondary-color-silver;
     }
 
+    @include desktop {
+        display: flex;
+    }
+
 
     &__thumbnail {
+
+        @include desktop {
+            width: 50%;
+        }
 
         &--title {
             margin: 1.5rem 0 0.5rem 0;
@@ -37,6 +51,17 @@
 
             @include tablet {
                 width: 50%;
+            }
+
+            @include desktop {
+                width: 100%;
+            }
+        }
+
+        &--imgContainer {
+            @include desktop {
+                padding-bottom: 1rem;
+                border-bottom: 1px solid $secondary-color-silver;
             }
         }
     }

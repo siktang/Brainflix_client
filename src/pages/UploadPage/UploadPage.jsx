@@ -11,7 +11,9 @@ export default function UploadPage() {
                 <div className="uploadDetails">
                     <div className="uploadDetails__thumbnail">
                         <h3 className="uploadDetails__thumbnail--title section-header">VIDEO THUMBNAIL</h3>
-                        <img src={videoThumbnail} alt="video thumbnail" className="uploadDetails__thumbnail--image"/>
+                        <div className="uploadDetails__thumbnail--imgContainer">
+                            <img src={videoThumbnail} alt="video thumbnail" className="uploadDetails__thumbnail--image"/>
+                        </div>
                     </div>
                     <UploadForm />
                 </div>
