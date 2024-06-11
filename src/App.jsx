@@ -11,7 +11,9 @@ function App() {
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<MainPage/>}></Route>
+        <Route path="/" element={<MainPage/>}>
+          <Route path="/videos/:videoId" element={<MainPage/>}></Route>
+        </Route>
         <Route path="/upload" element={<UploadPage/>}></Route>
         <Route path="*" element={<PageNotFound />} />
       </Routes>

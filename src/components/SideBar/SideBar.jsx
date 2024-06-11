@@ -1,7 +1,7 @@
 import ListedVideo from "../ListedVideo/ListedVideo"
 import "./SideBar.scss"
 
-export default function SideBar({ nextVideos, changeCurrentVideo }) {
+export default function SideBar({ nextVideos}) {
     return (
         <div className="sideBar">
             <h2 className="section-header">NEXT VIDEOS</h2>

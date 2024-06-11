@@ -1,27 +1,47 @@
-import { useState } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { videoListEndpoint } from "../../utils/api-utils";
 import CurrentVideo from "../../components/CurrentVideo/CurrentVideo";
 import VideoInfo from "../../components/VideoInfo/VideoInfo";
 import Form from "../../components/Form/Form";
 import DisplayComments from "../../components/DisplayComments/DisplayComments";
 import SideBar from "../../components/SideBar/SideBar";
-import videoList from "../../data/video-details.json";
 import "./MainPage.scss";
 
+
 export default function Main() {
-    const [currentVideo, setCurrentVideo] = useState(videoList[0]);
+    const [videoList, setVideoList] = useState([]);
 
-    const time = new Date(currentVideo.timestamp);
+    const { videoId } = useParams();
 
-    const nextVideos = videoList.filter((video) => (
-        video.id !== currentVideo.id
-    ) );
+    const getVideoList = async () => {
+        let res = await axios.get(videoListEndpoint());
+        setVideoList(res.data);
+    } 
 
-    const changeCurrentVideo = (videoId) => {
-        const selectedVideo = videoList.find((video) => (
-        video.id === videoId
-        ));
-        setCurrentVideo(selectedVideo);
+    useEffect(() => {
+        getVideoList();
+    }, [])
+
+    if (videoList.length < 1) {
+        return <h1>Loading...</h1>;
     }
+
+    const currentVideoId = videoId || videoList[0].id;
+
+    // const time = new Date(currentVideo.timestamp);
+
+    const nextVideos = videoList.filter((video) => 
+        video.id !== currentVideoId
+    );
+
+    // const changeCurrentVideo = (videoId) => {
+    //     const selectedVideo = videoList.find((video) => (
+    //     video.id === videoId
+    //     ));
+    //     setCurrentVideo(selectedVideo);
+    // }
     
     return (
         <main>
@@ -32,7 +52,7 @@ export default function Main() {
                     <Form />
                     <DisplayComments currentVideo={currentVideo} />
                 </div>
-                <SideBar nextVideos={nextVideos} changeCurrentVideo={changeCurrentVideo}/>
+                <SideBar nextVideos={nextVideos}/>
             </div>
         </main>
     )
