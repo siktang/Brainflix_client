@@ -3,6 +3,7 @@ import "./App.scss";
 import Header from "./components/Header/Header";
 import MainPage from "./pages/MainPage/MainPage";
 import UploadPage from "./pages/UploadPage/UploadPage";
+import PageNotFound from "./pages/PageNotFound/PageNotFound";
 
 function App() {
   
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage/>}></Route>
         <Route path="/upload" element={<UploadPage/>}></Route>
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
   )
