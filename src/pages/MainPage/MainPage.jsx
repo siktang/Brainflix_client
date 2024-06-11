@@ -45,15 +45,15 @@ export default function Main() {
     
     return (
         <main>
-            <CurrentVideo currentVideo={currentVideo} />
+            {/* <CurrentVideo currentVideo={currentVideo} />
             <div className="videoInfoContainer">
                 <div className="videoInfoContainer__details">
                     <VideoInfo currentVideo={currentVideo} time={time} />
                     <Form />
                     <DisplayComments currentVideo={currentVideo} />
-                </div>
+                </div> */}
                 <SideBar nextVideos={nextVideos}/>
-            </div>
+            {/* </div> */}
         </main>
     )
 }

@@ -15,6 +15,11 @@
         margin-right: 0;
     }
 
+    &__links {
+        text-decoration: none;
+        color: unset;
+    }
+
     &__poster {
         background-color: $secondary-color-silver;
         border-radius: 4px;

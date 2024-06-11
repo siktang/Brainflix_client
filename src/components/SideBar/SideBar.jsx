@@ -13,7 +13,6 @@ export default function SideBar({ nextVideos}) {
                     title={video.title}
                     image={video.image}
                     channel={video.channel}
-                    changeCurrentVideo={changeCurrentVideo}
                 />)}
             </section>
         </div>
