@@ -63,14 +63,14 @@ export default function Main() {
     return (
         <main>
             <CurrentVideo currentVideo={currentVideo} />
-            {/* <div className="videoInfoContainer">
-                <div className="videoInfoContainer__details">*/}
+            <div className="videoInfoContainer">
+                <div className="videoInfoContainer__details">
                     <VideoInfo currentVideo={currentVideo} timeUploaded={timeUploaded} />
                     <Form />
-                    {/*<DisplayComments currentVideo={currentVideo} />
-                </div> */}
+                    <DisplayComments currentVideo={currentVideo} />
+                </div> 
                 <SideBar nextVideos={nextVideos}/>
-            {/* </div> */}
+            </div> 
         </main>
     )
 }
