@@ -1,5 +1,6 @@
 import "./Navbar.scss"
 import avatar from "../../assets/images/Mohan-muruge.jpg"
+import { Link } from "react-router-dom"
 
 export default function Navbar() {
     return (
@@ -11,9 +12,11 @@ export default function Navbar() {
                 </div>
                 <img src={avatar} alt="Avatar-for-mobile" className="navbar__avatar--mobile" />
             </div>
-            <button type="button" className="navbar__button">
-                UPLOAD
-            </button>
+            <Link to={"/upload"} className="navbar__links">
+                <button type="button" className="navbar__button">
+                    UPLOAD
+                </button>
+            </Link>
             <img src={avatar} alt="Avatar-for-tablet" className="navbar__avatar--tablet" />
         </div>
     )
