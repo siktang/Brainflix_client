@@ -11,6 +11,7 @@ import "./MainPage.scss";
 
 
 export default function Main() {
+
     const [videoList, setVideoList] = useState([]);
     const [currentVideo, setCurrentVideo] = useState([]);
 
@@ -20,15 +21,23 @@ export default function Main() {
     const getVideoList = async () => {
         try{
             let res = await axios.get(videoListEndpoint());
+            console.log(res);
+            //console.log(res.data);
+
             setVideoList(res.data);
+            
         } catch(e){
-        console.error(e);
+            console.error(e);
         }
     }
+
+    //getVideoList();
 
     useEffect(() => {
         getVideoList();
     }, [])
+
+    //console.log(videoList);
 
     // retrieving current video based on route
     const currentVideoId = videoId || videoList[0].id;
