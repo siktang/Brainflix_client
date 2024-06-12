@@ -1,7 +1,9 @@
+import { useEffect, useState } from "react";
+import axios from "axios";
+
 import "./CurrentVideo.scss";
 
 export default function CurrentVideo({ currentVideo }) {
-
     return (
             <div className="videoContainer">
                 <video className="videoContainer__video" controls poster={currentVideo.image}>
