@@ -13,7 +13,6 @@ export default function Main() {
 
     const { videoId } = useParams();
 
-    // retrieving the list of videos
     const getVideoList = async () => {
         try{
             let res = await axios.get(videoListEndpoint());
@@ -25,8 +24,6 @@ export default function Main() {
         }
     }
 
-    //getVideoList();
-
     useEffect(() => {
         getVideoList();
     }, [])
@@ -35,9 +32,6 @@ export default function Main() {
         return <h1>Loading...</h1>;
     };
 
-    //console.log(videoList);
-
-    // retrieving current video based on route
     const currentVideoId = videoId || videoList[0].id;
 
     return (
