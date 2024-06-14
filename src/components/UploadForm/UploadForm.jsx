@@ -1,23 +1,32 @@
 import { useNavigate } from "react-router-dom";
-import "./UploadForm.scss"
+import { useState } from "react";
+import Modal from "react-modal";
+import "./UploadForm.scss";
 
 export default function UploadForm() {
+    const [isModalOepn, setIsModalOpen] = useState(false);
+    const [modalContent, setModalContent] = useState("");
 
     const navigate = useNavigate();
 
     const handleClickPublish = (event) => {
         event.preventDefault();
-        alert("Upload Successful! You will now be taken to Home Page.");
-        navigate("/");
+        setModalContent("Upload Successful! You will now be taken to Home Page.");
+        setIsModalOpen(true);
     }
 
     const handleClickCancel = (event) => {
         event.preventDefault();
-        alert("Upload Cancelled. You will now be taken to Home Page.");
+        setModalContent("Upload Cancelled. You will now be taken to Home Page.");
+        setIsModalOpen(true);
+    }
+
+    const handleCloseModal = () => {
         navigate("/");
     }
 
     return (
+        <div>
         <form className="form">
             <div className="form__fields">
                 <label htmlFor="title" className="section-header form__fields--label">TITLE YOUR VIDEO</label>
@@ -30,5 +39,17 @@ export default function UploadForm() {
                 <button className="form__buttons--cancel" onClick={handleClickCancel}>CANCEL</button>            
             </div>
         </form>
+        <Modal
+            isOpen={isModalOepn}
+            contentLabel={modalContent}
+            className="modal"
+            overlayClassName="modal__overlay"
+        >
+            <div>
+                <p className="modal__content">{modalContent}</p>
+                <button onClick={handleCloseModal} className="modal__button">CLOSE</button>
+            </div>
+        </Modal>
+        </div>
     )
 }
