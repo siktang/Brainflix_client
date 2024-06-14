@@ -15,6 +15,7 @@ function App() {
           <Route path="/videos/:videoId" element={<MainPage/>}></Route>
         </Route>
         <Route path="/upload" element={<UploadPage/>}></Route>
+        <Route path="/page-not-found" element={<PageNotFound />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>

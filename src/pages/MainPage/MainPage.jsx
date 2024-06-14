@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { videoListEndpoint } from "../../utils/api-utils";
 import VideoInfoContainer from "../../components/VideoInfoContainer/VideoInfoContainer";
 import CurrentVideo from "../../components/CurrentVideo/CurrentVideo";
@@ -8,6 +8,8 @@ import "./MainPage.scss";
 
 
 export default function Main() {
+
+    const navigate = useNavigate();
 
     const [videoList, setVideoList] = useState([]);
 
@@ -31,6 +33,10 @@ export default function Main() {
     };
 
     const currentVideoId = videoId || videoList[0].id;
+
+    if (videoId && !videoList.includes((video) => video.id === videoId)) {
+        navigate("/page-not-found");
+    }
 
     return (
         <main>
