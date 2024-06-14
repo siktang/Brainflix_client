@@ -3,11 +3,14 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.form {
-
+.formContainer {
     @include desktop {
-        width: 100%;
+        width: 88%;
     }
+}
+
+.form {
+    width: 100%;
 
     &__fields {
         display: flex;
@@ -34,12 +37,12 @@
             background-color: $secondary-color-white;
             border: 1px solid $secondary-color-silver;
             border-radius: 4px;
-            height: 2.25rem;
+            max-height: 2.25rem;
             width: 100%;
             padding: 0.75rem;
 
             @include tablet {
-                height: 2.5rem;
+                max-height: 2.5rem;
                 padding-left: 1rem;
             }
         }
@@ -61,7 +64,7 @@
             }
 
             @include desktop {
-                height: 5.75rem;
+                max-height: 5.75rem;
             }
         }
     }
@@ -89,7 +92,7 @@
         }
 
         &--publish, &--cancel {
-            height: 2.5rem;
+            min-height: 2.5rem;
             margin: 1rem 0 1rem 0;
             width: 100%;
             font-weight: 600;
