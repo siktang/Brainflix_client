@@ -34,7 +34,7 @@ export default function Main() {
 
     const currentVideoId = videoId || videoList[0].id;
 
-    if (videoId && !videoList.includes((video) => video.id === videoId)) {
+    if (videoId && !videoList.find((video) => video.id === videoId)) {
         navigate("/page-not-found");
     }
 
