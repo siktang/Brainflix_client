@@ -26,7 +26,7 @@ export default function UploadForm() {
     }
 
     return (
-        <div className="formContainer">
+        <div className="uploadFormContainer">
         <form className="form">
             <div className="form__fields">
                 <label htmlFor="title" className="section-header form__fields--label">TITLE YOUR VIDEO</label>

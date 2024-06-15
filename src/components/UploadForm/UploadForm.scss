@@ -3,9 +3,9 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.formContainer {
+.uploadFormContainer {
     @include desktop {
-        width: 88%;
+        width: 91%;
     }
 }
 
@@ -48,7 +48,7 @@
         }
 
         &--textarea {
-            height: 6.5rem;
+            min-height: 6.5rem;
             width: 100%;
             resize: vertical;
             padding: 0.75rem;

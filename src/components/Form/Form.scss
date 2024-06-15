@@ -49,8 +49,8 @@
             padding: 0.75rem;
             margin: 0.25rem 0 1rem 0;
             border-radius: 4px;
-            border: 1px solid $secondary-color-white;
-            background-color: $secondary-color-silver;
+            border: 1px solid $secondary-color-silver;
+            background-color: $secondary-color-white;
             overflow: hidden;
 
             @include tablet {
@@ -61,7 +61,7 @@
 
         &--button {
             background-color: $primary-color-blue;
-            height: 2.5rem;
+            min-height: 2.5rem;
             color: $primary-color-white;
             border: transparent;
             border-radius: 4px;
@@ -75,6 +75,7 @@
                 min-width: 9.375rem;
                 max-width: 9.375rem;
                 margin: 1.5rem 0 1.5rem 0;
+                background-position: 10% 50%;
             }
 
             @include desktop {
