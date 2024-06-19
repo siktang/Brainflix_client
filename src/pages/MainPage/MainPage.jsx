@@ -1,11 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { videoListEndpoint } from "../../utils/api-utils";
 import VideoInfoContainer from "../../components/VideoInfoContainer/VideoInfoContainer";
 import CurrentVideo from "../../components/CurrentVideo/CurrentVideo";
 import "./MainPage.scss";
 
+const API_URL = import.meta.env.VITE_API_URL;
 
 export default function Main() {
 
@@ -17,7 +17,7 @@ export default function Main() {
 
     const getVideoList = async () => {
         try{
-            let res = await axios.get(videoListEndpoint());
+            let res = await axios.get(API_URL + "/videos");
             setVideoList(res.data);
         } catch(e){
             console.error(e);

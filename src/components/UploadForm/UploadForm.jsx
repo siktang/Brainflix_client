@@ -1,7 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Modal from "react-modal";
+import axios from "axios";
 import "./UploadForm.scss";
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 export default function UploadForm() {
     const [isModalOepn, setIsModalOpen] = useState(false);
@@ -25,9 +28,18 @@ export default function UploadForm() {
         navigate("/");
     }
 
+    const handleFormSubmission = async (event) => {
+        const newVideo = {
+            title: event.target.title.value,
+            description: event.target.description.value,
+        };
+
+        await axios.post(`${API_URL}/videos`, newVideo);
+    }
+
     return (
         <div className="uploadFormContainer">
-        <form className="form">
+        <form className="form" onSubmit={handleFormSubmission}>
             <div className="form__fields">
                 <label htmlFor="title" className="section-header form__fields--label">TITLE YOUR VIDEO</label>
                 <input type="text" name="title" id="title" placeholder="Add a title to your video" className="form__fields--input"/>

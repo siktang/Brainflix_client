@@ -3,13 +3,15 @@ import { videoEndpoint } from "../../utils/api-utils";
 import axios from "axios";
 import "./CurrentVideo.scss";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 export default function CurrentVideo({ currentVideoId }) {
 
     const [currentVideo, setCurrentVideo] = useState([]); 
 
     const getCurrentVideo = async (id) => {
         try{
-            const res = await axios.get(videoEndpoint(id));
+            const res = await axios.get(API_URL + "/videos/" + id);
             setCurrentVideo(res.data);}
         catch(e){
             console.error(e);
