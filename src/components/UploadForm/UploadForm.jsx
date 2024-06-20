@@ -4,6 +4,9 @@ import Modal from "react-modal";
 import axios from "axios";
 import "./UploadForm.scss";
 
+//binding Modal to root element for accessibility
+Modal.setAppElement("#root");
+
 const API_URL = import.meta.env.VITE_API_URL;
 
 export default function UploadForm() {
